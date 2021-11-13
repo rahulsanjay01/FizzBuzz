@@ -9,13 +9,13 @@ function getValues()
     // 4.) Testing if "fizzValue" and "buzzValue" are integers using an if-statement.
 
     // Call generateNumbers()
-    // Using "let" to declare the variable "fbData" and setting it equal to the result of FizzBuzz(fizzValue, buzzValue) 
+    // Using "let" to declare the variable "fbData" and setting it equal to the result of FizzBuzz(fizzValue, buzzValue). 
 
     // Call displayNumbers()
-    // Calling the custom function "displayData()" and using "fbData" as the parameter
+    // Calling the custom function "displayData()" and using "fbData" as the parameter.
         
 
-    // Alerting the user if "fizzValue" and "buzzValue" are not Numbers
+    // Alerting the user if "fizzValue" and "buzzValue" are not Numbers.
 
     // 5.)
 }
