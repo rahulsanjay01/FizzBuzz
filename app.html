@@ -54,7 +54,7 @@
                 <div class="col col-lg-4 border-end border-2">
                     <h1>FizzBuzz: A Coding Project</h1>
                     <h4 class="lead">
-                        The program will display numbers in the range of 0 to 100. If the user has entered the number 3 as their Fizz value and the number 5 as their Buzz value, multiples of 3 and 5 will be replaced with the words <strong>Fizz</strong> and <strong>Buzz</strong> accordingly. The numbers that are multiples of both 3 and 5 will be replaced with <strong>FizzBuzz</strong></h4>.
+                        The program will display numbers in the range of 0 to 100. If the user has entered the number 3 as their Fizz value and the number 5 as their Buzz value, multiples of 3 and 5 will be replaced with the words <strong>"Fizz"</strong> and <strong>"Buzz"</strong> accordingly. The numbers that are multiples of both 3 and 5 will be replaced with <strong>"FizzBuzz"</strong>.</h4>
                     </h4>
                     <h2 class="mt-5 border-bottom border-2">Instructions</h2>
                     <p>Enter a Fizz value and an Buzz value within the range of 0 and 100. Click on the "view" button for the values to appear.</p>
@@ -64,10 +64,10 @@
                         <h5>Enter Values</h5>
                         <form class="row gy-2 gx-3">
                             <div class="col">
-                                <input id="fizzValue" type="number" class="form-control" placeholder="Fizz Value" value="0" aria-label="Fizz Value">
+                                <input id="fizzValue" type="number" class="form-control" placeholder="Fizz Value" value="3" aria-label="Fizz Value">
                             </div>
                             <div class="col">
-                                <input id="buzzValue" type="number" class="form-control" placeholder="Buzz Value" value="100" aria-label="Buzz Value">
+                                <input id="buzzValue" type="number" class="form-control" placeholder="Buzz Value" value="5" aria-label="Buzz Value">
                             </div>
                             <div class="col-12 d-flex justify-content-end">
                                 <button id="btnSubmit" type="button" class="btn btn-dark btn-md mb-5">View</button>
@@ -112,6 +112,9 @@
         integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous">
     </script>
     <script src="js/site.js"></script>
+    <script>
+        document.getElementById("btnSubmit").addEventListener("click", getValues);
+    </script>
 </body>
 
 </html>
