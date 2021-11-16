@@ -17,13 +17,13 @@ function getValues()
         //call displayData and write the values to the screen
         displayData(fbArray);
         //Alerting the user if "fizzValue" and "buzzValue" are not Numbers.
-    }else{
+    } else {
         alert("You must enter a integer")
     }
 }
 
 //do fizzBuzz
-function FizzBuzz(fizzValue, buzzValue)
+function fizzBuzz(fizzValue, buzzValue)
 {
     let returnArray = [];
 
@@ -41,11 +41,37 @@ function FizzBuzz(fizzValue, buzzValue)
             returnArray.push(i);
         }
     }
-    returnArray;
+    return returnArray;
 
 }
 //loop over the array and create a tablerow for each item.
 function displayData(fbArray){
+
+    //retrieve the table body element from the page
+    let tableBody = document.getElementById("results"); 
+
+    //get the template row
+    let templateRow = document.getElementById("fbTemplate");
+
+    //clear the table first
+    tableBody.innerHTML = "";
+    
+    for (let index = 0; index < fbArray.length; index += 5) {
+        
+        let tableRow = document.importNode(templateRow.content, true);
+
+        //grab use the to put into array
+        let rowCols = tableRow.querySelectorAll("td");
+        rowCols[0].textContent = fbArray[index];
+        rowCols[1].textContent = fbArray[index+1];
+        rowCols[2].textContent = fbArray[index+2];
+        rowCols[3].textContent = fbArray[index+3];
+        rowCols[4].textContent = fbArray[index+4];
+
+        tableBody.appendChild(tableRow);
+    }
+    
+    //add all the rows to the table
 
 }
 
