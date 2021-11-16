@@ -1,20 +1,20 @@
 function getValues()
 {
-    //- 1.) Declared the variable "fizzValue" using "let" and assigned it to the value that is found in the HTML element with the id "fizzValue" using document.getElementById.
+    //Declared the variable "fizzValue" using "let" and assigned it to the value that is found in the HTML element with the id "fizzValue" using document.getElementById.
     let fizzValue = document.getElementById("fizzValue").value;
 
-    //- 2.) Declared the variable "buzzValue" using "let" and assigned it to the value that is found in the HTML element with the id "buzzValue" using document.getElementById.
+    //Declared the variable "buzzValue" using "let" and assigned it to the value that is found in the HTML element with the id "buzzValue" using document.getElementById.
     let buzzValue = document.getElementById("buzzValue").value;
 
-    //- 3.) Using parseInt() to convert "fizzValue" and "buzzValue" to an integer.
+    //Using parseInt() to convert "fizzValue" and "buzzValue" to an integer.
     fizzValue = parseInt(fizzValue);
     buzzValue = parseInt(buzzValue);
 
-    //- 4.) Testing if "fizzValue" and "buzzValue" are integers using an if-statement.
+    //Testing if "fizzValue" and "buzzValue" are integers using an if-statement.
     if (Number.isInteger(fizzValue) && Number.isInteger(buzzValue)) {
-        //call fizzBuzz
+        //Calling fizzBuzz
         let fbArray = fizzBuzz(fizzValue, buzzValue);
-        //call displayData and write the values to the screen
+        //Calling displayData and write the values to the screen
         displayData(fbArray);
         //Alerting the user if "fizzValue" and "buzzValue" are not Numbers.
     } else {
@@ -22,15 +22,15 @@ function getValues()
     }
 }
 
-//do fizzBuzz
+//Executing fizzBuzz
 function fizzBuzz(fizzValue, buzzValue)
 {
     let returnArray = [];
 
-    //loop from 1 to 100
+    //For-Loop from 1 to 100
     for (let i = 1; i <= 100; i++) {
-        //checking to see if the number is divisible by 3, 5, or both
-        //pushing fizz, buzz, or fizzBuzz into the array if divisible by 3, 5, or both
+        //Checking to see if the number is divisible by 3, 5, or both
+        //Pushing fizz, buzz, or fizzBuzz into the array if divisible by 3, 5, or both
         if (i % fizzValue == 0 && i % buzzValue == 0){
             returnArray.push('FizzBuzz');
         } else if (i % fizzValue == 0) {
@@ -44,23 +44,23 @@ function fizzBuzz(fizzValue, buzzValue)
     return returnArray;
 
 }
-//loop over the array and create a tablerow for each item.
+//Looping over the array and create a tablerow for each item.
 function displayData(fbArray){
 
-    //retrieve the table body element from the page
+    //Retrieve the table body element from the page
     let tableBody = document.getElementById("results"); 
 
-    //get the template row
+    //Getting the template row
     let templateRow = document.getElementById("fbTemplate");
 
-    //clear the table first
+    //Clearing the table first
     tableBody.innerHTML = "";
     
     for (let index = 0; index < fbArray.length; index += 5) {
         
         let tableRow = document.importNode(templateRow.content, true);
 
-        //grab use the to put into array
+        //Using the columns in the template 
         let rowCols = tableRow.querySelectorAll("td");
         
         rowCols[0].classList.add(fbArray[index]);
@@ -81,7 +81,7 @@ function displayData(fbArray){
         tableBody.appendChild(tableRow);
     }
     
-    //add all the rows to the table
+    //Adding all the rows to the table
 
 }
 
