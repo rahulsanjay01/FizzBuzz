@@ -18,7 +18,7 @@ function getValues()
         displayData(fbArray);
         //Alerting the user if "fizzValue" and "buzzValue" are not Numbers.
     } else {
-        alert("You must enter a integer")
+        alert("You must enter an integer")
     }
 }
 
@@ -44,7 +44,7 @@ function fizzBuzz(fizzValue, buzzValue)
     return returnArray;
 
 }
-//Looping over the array and create a tablerow for each item.
+//Looping over the array and creating a tablerow for each item.
 function displayData(fbArray){
 
     //Retrieve the table body element from the page
