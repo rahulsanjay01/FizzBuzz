@@ -56,6 +56,7 @@
             <div class="row row-cols-1 row-cols-lg-2">
                 <div class="col-lg-8">
                     <pre class="line-numbers"><code class="language-javascript">
+                        //Controller Function
                         function getValues()
                         {
                             //Declared the variable "fizzValue" using "let" and assigned it to the value that is found in the HTML element with the id "fizzValue" using document.getElementById.
@@ -70,6 +71,8 @@
                         
                             //Testing if "fizzValue" and "buzzValue" are integers using an if-statement.
                             if (Number.isInteger(fizzValue) && Number.isInteger(buzzValue)) {
+                        
+                        //Logic Function
                                 //Calling fizzBuzz
                                 let fbArray = fizzBuzz(fizzValue, buzzValue);
                                 //Calling displayData and write the values to the screen
@@ -102,6 +105,8 @@
                             return returnArray;
                         
                         }
+                        //View Function
+                        
                         //Looping over the array and creating a tablerow for each item.
                         function displayData(fbArray){
                         
@@ -146,9 +151,23 @@
                     </pre>
                 </div>
                 <div class="col-lg-4">
-                    <p>The code is structured in one function.</p>
-                    <h5>Hello World</h5>
-                    <p>Hello World is a function that displays an alert with a message of "Hello World"</p>
+                    <h4>Description</h4>
+                    <p>The code can be broken down into three main functions:</p>
+                    
+                    <h5>1.) The Controller Function</h5>
+                    <p>
+                        The first step is to create variables for both fizzValue and buzzValue, this gives the input a static identifier that can be utilized. Giving the user's input a static identifier assists us in adding Javascript functionality. The second step serves to verify that the input is interpreted as integers and not as strings.
+                    </p>
+                    <br>
+                    <h5>2.) The Logic Function</h5>
+                    <p>
+                        The integers are used as parameters in the fizzBuzz function. The variable fizzBuzzArray holds the returned array. After the input is evaluated by the fizzBuzz function, the for-loop performs tests three separate conditions using if-statements. When the number is divisible by both the fizzValue and the buzzValue, "FizzBuzz" is displayed. If the number is only divisible by the fizzValue, "Fizz" is displayed. If the number is divisible by just the buzzValue, then the value of "Buzz" is displayed. The else-statement will simply display the number in table if the number is not divisible by the fizzValue nor the buzzValue. 
+                    </p>
+                    <br>
+                    <h5>3.) The View Function</h5>
+                    <p>
+                       In the controller function, I had declared the revString variable. This variable is rendered in the view function. The reversed user input is written to a hidden alert. I used the classList of invisible to implement this functionality. The final step is to remove the invisible class to display the reversed string.
+                    </p>
                 </div>
             </div>
          </div>

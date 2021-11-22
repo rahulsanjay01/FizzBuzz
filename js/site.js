@@ -1,3 +1,5 @@
+//Controller Function
+
 function getValues()
 {
     //Declared the variable "fizzValue" using "let" and assigned it to the value that is found in the HTML element with the id "fizzValue" using document.getElementById.
@@ -12,6 +14,9 @@ function getValues()
 
     //Testing if "fizzValue" and "buzzValue" are integers using an if-statement.
     if (Number.isInteger(fizzValue) && Number.isInteger(buzzValue)) {
+
+//Logic Function  
+
         //Calling fizzBuzz
         let fbArray = fizzBuzz(fizzValue, buzzValue);
         //Calling displayData and write the values to the screen
@@ -44,6 +49,8 @@ function fizzBuzz(fizzValue, buzzValue)
     return returnArray;
 
 }
+//View Function
+
 //Looping over the array and creating a tablerow for each item.
 function displayData(fbArray){
 
